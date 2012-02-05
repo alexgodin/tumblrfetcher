@@ -3,7 +3,7 @@ require "curb"
 require 'json'
 
 $blogname=corgiaddict
-$api_key="8XdzoAFSKX74TRv243IBfozMeR7l85XuNbZ5JyXP4Cc6VoC6G4"
+$api_key=""
 
 def tumble(action, options="")
   JSON.parse(Curl::Easy.perform("http://api.tumblr.com/v2/blog/#{$blogname}.tumblr.com/#{action}?api_key=#{$api_key}#{options}").body_str)
